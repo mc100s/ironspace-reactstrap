@@ -122,7 +122,7 @@ export default class JoinPage extends Component {
                 onChange={this.handleChange}
                 valid={this.isFieldValid('motivation')}
                 invalid={this.state.showInvalid && !this.isFieldValid('motivation')} />
-              {!this.isFieldValid('motivation') && <FormText>Enter at least 30 characters</FormText>}
+              {!this.isFieldValid('motivation') && <FormText>Enter at least {30 - this.state.motivation.length} more characters</FormText>}
             </Col>
           </FormGroup>
 
